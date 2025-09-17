@@ -116,7 +116,8 @@ I’ll take the Python **client–server code** I gave earlier and add **very de
         start_server()
     
 
-
+```
+```py
 🔹 Client (client.py)
 =====================
 
@@ -276,8 +277,8 @@ I’ll provide **Python implementations** of both **UDP server** and **UDP clien
     if __name__ == "__main__":
         start_udp_server()
     
-
-
+```
+```py
 🔹 UDP Client (client.py)
 =========================
 
@@ -458,7 +459,8 @@ I’ll write both the **server** and **client** programs in **Python**, with **e
     if __name__ == "__main__":
         start_chat_server()
     
-
+```
+```py
 🔹 Client (client.py)
 =====================
 
