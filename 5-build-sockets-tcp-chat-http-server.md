@@ -116,7 +116,6 @@ I’ll take the Python **client–server code** I gave earlier and add **very de
         start_server()
     
 
-* * *
 
 🔹 Client (client.py)
 =====================
@@ -172,7 +171,6 @@ I’ll take the Python **client–server code** I gave earlier and add **very de
         start_client()
     
 
-* * *
 ```
 🔹 Key Socket Programming Concepts (explained in comments above but here’s a summary)
 =====================================================================================
@@ -223,7 +221,7 @@ I’ll provide **Python implementations** of both **UDP server** and **UDP clien
 
 🔹 UDP Server (server.py)
 =========================
-
+```py
     """
     ================================
        Simple UDP Server Program
@@ -279,7 +277,6 @@ I’ll provide **Python implementations** of both **UDP server** and **UDP clien
         start_udp_server()
     
 
-* * *
 
 🔹 UDP Client (client.py)
 =========================
@@ -332,7 +329,7 @@ I’ll provide **Python implementations** of both **UDP server** and **UDP clien
         start_udp_client()
     
 
-* * *
+```
 
 🔹 Key UDP Concepts (recap)
 ===========================
@@ -398,7 +395,7 @@ I’ll write both the **server** and **client** programs in **Python**, with **e
 
 🔹 Server (server.py)
 =====================
-
+```py
     """
     ===========================================
          Simple TCP Chat Server (Turn-based)
@@ -462,8 +459,6 @@ I’ll write both the **server** and **client** programs in **Python**, with **e
         start_chat_server()
     
 
-* * *
-
 🔹 Client (client.py)
 =====================
 
@@ -521,7 +516,7 @@ I’ll write both the **server** and **client** programs in **Python**, with **e
         start_chat_client()
     
 
-* * *
+```
 
 🔹 Explanation of Turn-Based Logic
 ==================================
@@ -838,7 +833,7 @@ I’ll give you a **simple, single-threaded HTTP server** in **Python**, using o
 
 📌 Simple HTTP Server (Python, Socket Programming)
 ==================================================
-
+```py
     # simple_http_server.py
     #
     # A minimal HTTP server implemented using low-level socket programming in Python.
@@ -1040,9 +1035,8 @@ I’ll give you a **simple, single-threaded HTTP server** in **Python**, using o
     
     if __name__ == "__main__":
         run_server()
-    
 
-* * *
+```
 
 🔎 How This Works (Step by Step)
 ================================
