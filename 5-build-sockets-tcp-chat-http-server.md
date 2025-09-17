@@ -48,7 +48,7 @@ I’ll take the Python **client–server code** I gave earlier and add **very de
 
 🔹 Server (server.py)
 =====================
-
+```py
     """
     ==============================
        Simple TCP Server Program
@@ -173,7 +173,7 @@ I’ll take the Python **client–server code** I gave earlier and add **very de
     
 
 * * *
-
+```
 🔹 Key Socket Programming Concepts (explained in comments above but here’s a summary)
 =====================================================================================
 
