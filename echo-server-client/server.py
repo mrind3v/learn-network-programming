@@ -25,7 +25,9 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         print(f"connected by {addr}")
 
         # step5 - infinite while loop over the blocking call recv() because it is also an I/O heavy operation
-        # -> waits for client to send something
+        # -> waits for client to send something. 
+        # 2nd reason - so the server can continuously receive and respond to multiple messageges for the same
+        # client without closing the connected after just one message
         while True:
             data = conn.recv(1024) # max number of bytes to receive from client in one call
             
