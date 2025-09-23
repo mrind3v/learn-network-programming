@@ -6,7 +6,7 @@ import datetime
 
 
 HOST = '127.0.0.1' # default ip address if not explicitly passed as cmd arg
-PORT = '8080' # by default http server listens on port 8080 
+PORT = 8080 # by default http server listens on port 8080 
 RESOURCES_DIR = "resources" # directory from where html files will be served as response from server
 BUFFER_SIZE = 4096 # max size of http request we can handle 
 
@@ -16,7 +16,7 @@ server.py    8080         127.0.0.1
 sys.argv[0]  sys.argv[1]  sys.argv[2]
 """
 if len(sys.argv)>1: # if there are more than 1 arguement. 0th arg is the script name - server.py
-    PORT = sys.argv[1]
+    PORT = int(sys.argv[1])
 if len(sys.argv)>2:
     HOST = sys.argv[2]
 
@@ -58,7 +58,7 @@ def buildResponse(statusCode, statusMessage, body="", contentType="text/html" ):
         Content-Length: 48\r\n
         etc...\r\n
         """
-        headerStr = "\r\n".join(headers)
+        headerStr = "\r\n".join(header)
         return headerStr.encode('utf-8') + bodyEncoded
 
 def errorPage(code, message, description):
@@ -111,9 +111,9 @@ def handleRequest(reqData): # function to parse HTTP req from user and send appr
             body = errorPage(400, "Forbidden", "Access Denied") 
             return buildResponse(400, "Forbidden",body) 
         filePath = os.path.join(RESOURCES_DIR, path.lstrip("/"))
-        if not os.path.exists(path):
-            body = errorPage(404, "Does Not Exist", "Requested resource doesn't Exist") 
-            return buildResponse(404, "Does not exist")  
+        if not os.path.exists(filePath):
+            body = errorPage(404, "Not Found", "Requested resource doesn't Exist") 
+            return buildResponse(404, "Not Found")  
         # if everything is fine 
         with open(filePath, "r", encoding="utf-8") as f: 
             content = f.read()
@@ -134,9 +134,12 @@ def startServer():
         try:
             while True:
                 reqData = conn.recv(BUFFER_SIZE) 
+                if not reqData:
+                    break; 
+                if reqData.decode('utf-8').lower()=="exit":
+                    break
                 response = handleRequest(reqData) 
                 conn.sendall(response) 
-                conn.close()
         except KeyboardInterrupt:
             print("Shutting down gracefully...")
    
