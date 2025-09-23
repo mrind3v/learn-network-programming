@@ -33,6 +33,9 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             # out of the loop
             if not data:
                 break
-
+            
+            # as data is received in bytes, we decode it to string
+            received_str = data.decode('utf-8')
             # step7 (Q specific) - we shall echo back what the client has sent to the client
-            conn.sendall(data)
+            # we encode encode/convert string "received_str" as byte string to send it over the network 
+            conn.sendall(received_str.encode('utf-8'))
