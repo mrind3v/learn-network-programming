@@ -1,5 +1,6 @@
 import socket 
 
+# FOR CLIENT - SEND -> RECEIVE -> PRINT
 def startClient(HOST='127.0.0.1', PORT='65432'):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s: 
         s.connect((HOST,PORT))
@@ -12,7 +13,8 @@ def startClient(HOST='127.0.0.1', PORT='65432'):
             # wait for server response
             serverMessage = s.recv(1024)
             if not serverMessage:
-                print("Server disconnected") 
+                print("Server disconnected...")
+                break 
             serverMessageDecoded = serverMessage.decode('utf-8') 
             print(f"Response from server: {serverMessageDecoded}")  
 

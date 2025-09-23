@@ -3,6 +3,8 @@ import socket
 An Interactive, turn-based TCP chat application where the client always starts first,
 and then messages alternate between client and server.
 """
+
+# FOR SERVER - RECEIVE -> PRINT -> RESPOND
 def startServer(HOST='127.0.0.1', PORT=65432):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s: 
         s.bind((HOST,PORT)) 
