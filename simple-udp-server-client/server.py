@@ -12,7 +12,10 @@ def startServer(HOST='127.0.0.1', PORT=65432):
                 print("Closing server as the client sent 'exit'...") 
                 break 
             # otherwise, just print what's sent by the client 
-            print(f"Client message: {dataDecoded}")
+            # print(f"Client message: {dataDecoded}")
+            # or send something to client
+            response = input("Response: ") 
+            s.sendto(response.encode('utf-8'),addr)
 
 
 if __name__=="__main__":

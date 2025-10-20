@@ -38,6 +38,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             
             # as data is received in bytes, we decode it to string
             received_str = data.decode('utf-8')
-            # step7 (Q specific) - we shall echo back what the client has sent to the client
+            
+            # step7 (Q specific) - we shall echo back what the client has sent to the server
             # we encode encode/convert string "received_str" as byte string to send it over the network 
             conn.sendall(received_str.encode('utf-8'))
