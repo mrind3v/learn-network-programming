@@ -1,18 +1,4 @@
-## You asked:
-
-what is subnet mask. give me a detailed explanation with comprehensive example
-
----
-
-## Gemini Replied:
-
-A subnet mask is a 32-bit number used to divide an IP address into two parts: the **network address** and the **host address**. It essentially tells a computer or networking device which part of the IP address identifies the network it's on and which part identifies the specific device.
-
-Think of it like a mailing address. If your address is "123 Main Street", "Main Street" is the network (the street you live on), and "123" is the host (your specific house on that street). The subnet mask is the rule that separates the street name from the house number.
-
-* * *
-
-How It Works: The Binary Logic
+How Subnets Work: The Binary Logic
 ------------------------------
 
 At its core, networking happens in binary. Both IP addresses and subnet masks are 32-bit binary numbers, though we usually write them in "dotted-decimal" notation for readability (e.g.,  $192.168.1.100$ ).
