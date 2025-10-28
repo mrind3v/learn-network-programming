@@ -12,8 +12,6 @@ The rule for a subnet mask is simple:
 
 To find the network address, a device performs a bitwise **AND** operation between its IP address and the subnet mask.
 
-![Image of a logical AND gate symbol](https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTXR_XdR6YK4tGoWJwtVbXFRJqeItnowYkvKTwVK2Zlc9gAbjOSmxFO24M4EqIPQP7w8yr3k_ZYbAhm9ZGoH_1NiXgxGbmTjc5HpqrrHMkP_1hxOuU)
-
 * * *
 
 Comprehensive Example
